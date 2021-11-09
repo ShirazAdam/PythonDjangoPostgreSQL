@@ -1,0 +1,6 @@
+GRANT CONNECT ON DATABASE "PythonDjango" TO "python";
+--GRANT USAGE ON DATABASE "PythonDjango" TO "python";
+GRANT USAGE ON SCHEMA public TO "python";
+--GRANT SELECT ON DATABASE "PythonDjango" TO "python";
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO "python";
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO "python";

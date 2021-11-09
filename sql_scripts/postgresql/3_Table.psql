@@ -1,0 +1,16 @@
+-- Table: public.LogMessage
+
+-- DROP TABLE public."LogMessage";
+
+CREATE TABLE IF NOT EXISTS public."LogMessage"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    message character varying(300) COLLATE pg_catalog."default" NOT NULL,
+    log_date timestamp without time zone,
+    CONSTRAINT "LogMessages_pkey" PRIMARY KEY (id, message)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public."LogMessage"
+    OWNER to "python";

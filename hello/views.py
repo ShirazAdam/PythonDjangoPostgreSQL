@@ -64,7 +64,7 @@ def log_message(request):
         if form.is_valid():
             message = form.save(commit=False)
             message.log_date = datetime.now()
-            message.save()
+            message.save(using='postgresql') # remove using='postgresql' to use the default database
             return redirect("home")
     else:
         return render(request, "hello/log_message.html", {"form": form})
